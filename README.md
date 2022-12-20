@@ -1,2 +1,2 @@
 # nixos-config
-NixOS Configuration
+NixOS Configuration burrowed heavily from mitchellh/nixos-config. 
