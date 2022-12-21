@@ -1,0 +1,16 @@
+window:
+  decorations: transparent
+  padding:
+    y: 27
+
+dynamic_title: true
+cursor:
+  style: Block
+
+font:
+  size: 13.0
+  normal:
+    family: "Monaco for Powerline"
+
+key_bindings:
+  - { key: V, mods: Command, action: Paste}

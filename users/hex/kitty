@@ -3,4 +3,6 @@ font_size 12.0
 
 map super+v paste_from_clipboard
 map super+c copy_or_interrupt
+map super+k combine: clear_terminal scroll active : send_text normal,application \x0c
+
 

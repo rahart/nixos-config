@@ -84,7 +84,8 @@
     killall
     #niv
     #rxvt_unicode
-    #xclip
+    xclip
+    gtkmm3
   ];
 
   services.openssh.enable = true;

@@ -13,16 +13,13 @@ in {
     pkgs.ripgrep
   ];
 
+  home.sessionVariables = {
+    LANG = "en_US.UTF-8";
+    EDITOR = "nvim";
+  };
+
   programs.alacritty = {
     enable = true;
-    settings = {
-      env.TERM = "xterm-256color";
-      key_bindings = [
-        { key = "K"; mods="Command"; chars = "ClearHistory"; }
-        { key = "C"; mods="Command"; chars = "Copy"; }
-        { key = "V"; mods="Command"; chars = "Paste"; }
-      ];
-    };
   };
 
   programs.neovim = {
@@ -41,6 +38,37 @@ in {
 
   programs.tmux = {
     enable = true;
+  };
+
+  programs.kitty = {
+    enable = true;
+    extraConfig = builtins.readFile ./kitty;
+  };
+
+  programs.zsh = {
+    enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      theme  = "robbyrussell";
+    };
+
+    shellAliases = {
+      ".." = "cd ..";
+      ll = "ls -la";
+      ltr = "ls -ltr";
+      reload = "source ~/.zshrc";
+      k = "kubectl";
+      kctx = "kubectx";
+      vi = "nvim";
+      vim = "nvim";
+    };
+    
+    shellGlobalAliases = {
+      UUID = "$(uuidgen | tr -d \\n)";
+      G = "| grep";
+      RG = "| rg";
+    };
   };
 
 }
