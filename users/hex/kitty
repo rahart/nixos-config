@@ -1,0 +1,6 @@
+font_family Fira Code
+font_size 12.0
+
+map super+v paste_from_clipboard
+map super+c copy_or_interrupt
+
