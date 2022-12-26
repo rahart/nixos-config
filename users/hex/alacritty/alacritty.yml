@@ -19,6 +19,3 @@ font:
 key_bindings:
   - { key: V, mods: Super, action: Paste }
   - { key: C, mods: Super, action: Copy }
-debug:
-  log_level: Debug
-  print_events: true
