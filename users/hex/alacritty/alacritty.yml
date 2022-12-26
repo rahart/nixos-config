@@ -19,3 +19,7 @@ font:
 key_bindings:
   - { key: V, mods: Super, action: Paste }
   - { key: C, mods: Super, action: Copy }
+  - { key: K, mods: Super, action: ClearHistory }
+  - { key: Key0, mods: Super, action: ResetFontSize }
+  - { key: Equals, mods: Super, action: IncreaseFontSize}
+  - { key: Subtract, mods: Super, action: DecreaseFontSize }
