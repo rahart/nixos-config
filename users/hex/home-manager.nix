@@ -37,8 +37,8 @@ in {
   };
 
   xdg.configFile.alacritty = {
-    source = ./alacritty.yml;
-    target = "/home/hex/.config/alacritty/alacritty.yml";
+    source = ./alacritty;
+    recursive = true;
   };
 
   programs.git = {
