@@ -10,6 +10,7 @@ in {
     pkgs.bat
     pkgs.firefox
     pkgs.jq
+    pkgs.fzf
     pkgs.ripgrep
     pkgs.picom
     pkgs.nitrogen
@@ -18,6 +19,9 @@ in {
     pkgs.kubectx
     pkgs.go
     pkgs.gopls
+    pkgs.nodejs
+    pkgs.cargo
+    pkgs.rustc
   ];
 
   home.sessionVariables = {
@@ -126,6 +130,9 @@ in {
     oh-my-zsh = {
       enable = true;
       theme  = "strug";
+      plugins = [
+        "vi-mode"
+      ];
     };
 
     shellAliases = {
