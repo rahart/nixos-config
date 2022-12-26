@@ -1,16 +1,24 @@
 window:
-  decorations: transparent
+  dimensions:
+    columns: 85
+    lines: 40
+  opacity: 0.5
+  background_opacity: 0.8
   padding:
-    y: 27
+    y: 10
+    x: 10
+  decorations: none
 
 dynamic_title: true
 cursor:
   style: Block
 
 font:
-  size: 13.0
-  normal:
-    family: "Monaco for Powerline"
+  size: 10.0
 
 key_bindings:
-  - { key: V, mods: Command, action: Paste}
+  - { key: V, mods: Super, action: Paste }
+  - { key: C, mods: Super, action: Copy }
+debug:
+  log_level: Debug
+  print_events: true

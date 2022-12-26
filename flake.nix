@@ -19,17 +19,17 @@
     in {
       nixosConfigurations = {
         hex = lib.nixosSystem {
-  	      inherit system;
+          inherit system;
   	      modules = [ 
-            ./hardware/aarch64-vm.nix
-            ./machine/aarch64-vm.nix
-            ./users/hex/nixos.nix
-    	      home-manager.nixosModules.home-manager {
-	            home-manager.useGlobalPkgs = true;
-	            home-manager.useUserPackages = true;
-	            home-manager.users.hex = import ./users/hex/home-manager.nix;
-	          }
-	        ];
+                ./hardware/aarch64-vm.nix
+                ./machine/aarch64-vm.nix
+                ./users/hex/nixos.nix
+                home-manager.nixosModules.home-manager {
+                  home-manager.useGlobalPkgs = true;
+	          home-manager.useUserPackages = true;
+	          home-manager.users.hex = import ./users/hex/home-manager.nix;
+	        }
+	      ];
         };
       };
     };
