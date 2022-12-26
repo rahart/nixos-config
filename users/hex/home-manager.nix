@@ -16,6 +16,8 @@ in {
     pkgs.nerdfonts
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.go
+    pkgs.gopls
   ];
 
   home.sessionVariables = {
@@ -102,7 +104,12 @@ in {
     enable = true;
     extraConfig = builtins.readFile ./kitty;
   };
-
+  
+  programs.go = {
+    enable = true;
+    goPath = "code/go";
+  };
+  
   programs.zsh = {
     enable = true;
 
