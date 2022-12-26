@@ -43,6 +43,16 @@ in {
     recursive = true;
   };
 
+  xdg.configFile.awesome = {
+    source = ./awesome;
+    recursive = true;
+  };
+
+  xdg.configFile.wallpaper = {
+    source = ./wallpaper;
+    recursive = true;
+  };
+
   programs.git = {
     enable    = true;
     userName  = "Travis Harrington";
