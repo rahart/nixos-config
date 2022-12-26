@@ -14,6 +14,8 @@ in {
     pkgs.picom
     pkgs.nitrogen
     pkgs.nerdfonts
+    pkgs.kubectl
+    pkgs.kubectx
   ];
 
   home.sessionVariables = {
@@ -34,7 +36,10 @@ in {
     recursive = true;
   };
 
-
+  xdg.configFile.alacritty = {
+    source = ./alacritty.yml;
+    target = "/home/hex/.config/alacritty/alacritty.yml";
+  };
 
   programs.git = {
     enable    = true;
@@ -103,7 +108,7 @@ in {
 
     oh-my-zsh = {
       enable = true;
-      theme  = "robbyrussell";
+      theme  = "strug";
     };
 
     shellAliases = {
