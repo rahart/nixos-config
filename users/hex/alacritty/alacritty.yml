@@ -3,7 +3,7 @@ window:
     columns: 85
     lines: 40
   opacity: 0.5
-  background_opacity: 0.8
+  background_opacity: 0.9
   padding:
     y: 10
     x: 10
