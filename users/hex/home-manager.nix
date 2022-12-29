@@ -22,6 +22,7 @@ in {
     pkgs.nodejs
     pkgs.cargo
     pkgs.rustc
+    pkgs.zip
   ];
 
   home.sessionVariables = {

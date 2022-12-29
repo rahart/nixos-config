@@ -49,7 +49,6 @@
   services.xserver = {
     enable = true;
     layout = "us";
-    resolutions = { x = 2560; y = 1440; };
     virtualScreen = { x = 2560; y = 1440; };
 
     desktopManager = {
