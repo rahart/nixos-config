@@ -27,6 +27,11 @@
 
   # Define your hostname.
   networking.hostName = "dev";
+  
+  # Define local lab k8 server
+  networking.extraHosts = ''
+  192.168.0.220 k8.0xc0.dev
+  '';
 
   # Set your time zone.
   time.timeZone = "America/Denver";
@@ -87,6 +92,7 @@
     #rxvt_unicode
     xclip
     gtkmm3
+    dnsmasq
   ];
 
   services.openssh.enable = true;
