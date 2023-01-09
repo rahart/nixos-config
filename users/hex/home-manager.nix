@@ -23,6 +23,7 @@ in {
     pkgs.cargo
     pkgs.rustc
     pkgs.zip
+    pkgs.newsboat
   ];
 
   home.sessionVariables = {
@@ -145,6 +146,7 @@ in {
       kctx = "kubectx";
       vi = "nvim";
       vim = "nvim";
+      rsh = "nix-shell -p pkg-config openssl gcc dbus";
     };
     
     shellGlobalAliases = {
