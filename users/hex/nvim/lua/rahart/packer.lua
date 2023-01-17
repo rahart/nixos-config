@@ -12,19 +12,24 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use ("wbthomason/packer.nvim")
+  use ('wbthomason/packer.nvim')
   -- Theme
-  use ("folke/tokyonight.nvim")
-    
+  use ('folke/tokyonight.nvim')
+  -- Tim Pope stuff
+  use ('tpope/vim-fugitive')
+  use ("tpope/vim-surround")
+  -- use ("tpope/vim-commentary")
+
   -- Navigation
   use ("christoomey/vim-tmux-navigator")
   -- File stuff
   use ("ThePrimeagen/harpoon")
+  use { "nvim-treesitter/nvim-treesitter", run=":TSUpdate" }
   use ("nvim-lua/popup.nvim")
   use ("nvim-lua/plenary.nvim")
   use ("nvim-lua/telescope.nvim")
   use ("jremmen/vim-ripgrep")
-  
+
   -- commenting
   use ("numToStr/Comment.nvim")
   -- file tree
@@ -44,8 +49,8 @@ return require('packer').startup(function(use)
   use ("hrsh7th/cmp-nvim-lua")
   use ("hrsh7th/cmp-nvim-lsp")
 
-    -- snippets
-  use ("L3MON4D3/LuaSnip") 
+  -- snippets
+  use ("L3MON4D3/LuaSnip")
   use("rafamadriz/friendly-snippets")
 
   -- Automatically set up your configuration after cloning packer.nvim
