@@ -2,6 +2,7 @@
 let 
   home.username = "hex";
 in {
+  home.overlays = [(import ~/nix-config/overlays/neovim)];
   home.username = "hex";
   home.homeDirectory = "/home/hex";
   home.stateVersion = "22.11";

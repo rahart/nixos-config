@@ -1,0 +1,9 @@
+self: super:
+{
+  neovim = super.callPackage(fetchFromGitHub {
+    owner = "rahart";
+    repo = "dotfiles";
+    rev = "6fe2571677e81aa3f47964a7e1f86de5b756a9be";
+    sha256 = "0000000000000000000000000000000000000000000000000000";
+  }) {};
+}
