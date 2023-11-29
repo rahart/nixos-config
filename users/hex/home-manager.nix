@@ -5,11 +5,11 @@ in {
   #home.overlays = [(import ~/nix-config/overlays/neovim)];
   home.username = "hex";
   home.homeDirectory = "/home/hex";
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.05";
   xdg.enable = true;
   home.packages = [
     pkgs.bat
-    pkgs.firefox
+    #pkgs.firefox -- firefox takes forever to build in home-manager
     pkgs.jq
     pkgs.fzf
     pkgs.ripgrep
@@ -26,6 +26,7 @@ in {
     pkgs.zip
     pkgs.newsboat
     pkgs.tmux
+    pkgs.zsh
   ];
 
   home.sessionVariables = {
@@ -67,6 +68,12 @@ in {
     enable    = true;
     userName  = "Travis Harrington";
     userEmail = "travis.harrington@gmail.com";
+    aliases = {
+      s  = "status";
+      p  = "push";
+      ci = "commit";
+      co = "checkout";
+    }
     extraConfig = {
       color.ui           = true;
       init.defaultBranch = "main";
