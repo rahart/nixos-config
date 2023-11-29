@@ -35,3 +35,11 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+vim.g.conceallevel = 2
+vim.g.concealcursor = 'nc'
+vim.g.copilot_enable = false
+vim.g.copilot_no_tab_map = false
+vim.g.copilot_no_enter_map = true
+vim.g.copilot_filetypes = {
+  ["*"] = true,
+}

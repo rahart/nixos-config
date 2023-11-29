@@ -4,7 +4,18 @@ end
 
 local actions = require "telescope.actions"
 
-require('telescope').setup()
+require('telescope').setup{
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_move = "smart_case",
+    }
+  }
+}
+
+require('telescope').load_extension('fzf')
 
 local mappings = {}
 mappings.curr_buf = function ()

@@ -1,25 +1,11 @@
--- local M = {}
---
--- local function bind(op, outer_opts)
---     outer_opts = outer_opts or {noremap = true}
---     return function(lhs, rhs, opts)
---         opts = vim.tbl_extend("force",
---             outer_opts,
---             opts or {}
---         )
---         vim.keymap.set(op, lhs, rhs, opts)
---     end
--- end
---
--- M.nmap = bind("n", {noremap = false})
--- M.nnoremap = bind("n")
--- M.vnoremap = bind("v")
--- M.xnoremap = bind("x")
--- M.inoremap = bind("i")
--- local keymap = vim.keymap.set
-
 -- Insert mode
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Copilot
+vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<cr>")
+vim.keymap.set("n", "<leader>ce", "<cmd>Copilot enable<cr>")
+-- vim.api.nvim_set_keymap("i", "<C-A>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
+-- Test it in the 
 
 -- Visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -35,7 +21,6 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
--- vim.keymap.set("n", "", "")
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
@@ -43,11 +28,11 @@ vim.keymap.set("n", "<C-s>", ":wa!<cr>") -- save all files in buffers
 vim.keymap.set("n", "<leader><leader>s", "<cmd>lua package.loaded.rahart=nil<cr>:source ~/.config/nvim/init.lua<CR>")
 vim.keymap.set("n", "<leader><leader>h", "<cmd>lua package.loaded.rahart=nil<cr>:source %<CR>")
 
-
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
+
 -- telecscope
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>")
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files hidden=true<cr>")
 vim.keymap.set("n", "<leader>gr", ":Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>gf", ":Telescope git_files<cr>")
 vim.keymap.set("n", "<leader>gc", ":Telescope git_commits<cr>")
@@ -65,6 +50,6 @@ vim.keymap.set("n", "<leader>ha", ":lua require('harpoon.mark').add_file()<cr>")
 -- File Tree
 vim.keymap.set("n", "<leader>tr", ":NvimTreeToggle<cr>")
 
--- Packer
-vim.keymap.set("n", "<C-i>", ":PackerInstall<cr>")
-
+-- Luasnip in configfile
+-- reload config
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")

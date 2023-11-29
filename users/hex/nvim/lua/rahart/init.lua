@@ -1,6 +1,5 @@
-require("rahart.packer")
-require("rahart.colors")
-require("rahart.set")
+require("rahart.settings")
 require("rahart.keymap")
+require("rahart.lazy")
 require("rahart.plugins")
 
