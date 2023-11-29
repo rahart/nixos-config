@@ -73,7 +73,7 @@ in {
       p  = "push";
       ci = "commit";
       co = "checkout";
-    }
+    };
     extraConfig = {
       color.ui           = true;
       init.defaultBranch = "main";
